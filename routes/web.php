@@ -19,4 +19,6 @@ Route::get('/', function () {
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::get('/', 'DashboardController@index')->name('dashboard');
+
+    Route::resource('categories', 'CategoryController')->except(['show']);
 });

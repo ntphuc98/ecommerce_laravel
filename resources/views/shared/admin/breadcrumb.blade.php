@@ -6,7 +6,7 @@
     </div><!-- /.col -->
     <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-          <li class="breadcrumb-item"><a href="#">@lang('admin.breadcrumb')</a></li>
+          <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">@lang('admin.breadcrumb')</a></li>
           <li class="breadcrumb-item active">{{ $breadcrumb }}</li>
       </ol>
   </div><!-- /.col -->
