@@ -36,14 +36,14 @@
               <li class="nav-item">
                 <a href="{{ route('admin.categories.index') }}" class="nav-link {{ url()->current() == route('admin.categories.index') ? 'active': ''}}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Categories</p>
+                  <p>@lang('admin.menu.categories')</p>
                 </a>
               </li>
               <li class="nav-item">
-                {{-- <a href="{{ route('admin.users.index') }}" class="nav-link {{ url()->current() == route('admin.users.index') ? 'active': ''}}">
+                <a href="{{ route('admin.users.index') }}" class="nav-link {{ url()->current() == route('admin.users.index') ? 'active': ''}}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Users</p>
-                </a> --}}
+                  <p>@lang('admin.menu.users')</p>
+                </a>
               </li>
             </ul>
           </li>

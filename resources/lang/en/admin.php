@@ -2,10 +2,11 @@
 
 return [
     'layout' => [
-        'title' => ':title | Admin | Ecommerce'
+        'title' => ':title Admin | Ecommerce'
     ],
     'menu' => [
-        'category' => 'Category',
+        'categories' => 'Categories',
+        'users' => 'Users',
     ],
     'breadcrumb' => 'Admin',
     'dashboard' => [
@@ -36,6 +37,33 @@ return [
         ],
         'delete' => [
             'success' => 'Delete the category successfully!',
+        ],
+    ],
+    'users' => [
+        'title' => 'Users',
+        'index' => [
+            'title' => 'Users',
+            'table-title' => 'User List',
+            'breadcrumb' => 'Users',
+        ],
+        'create' => [
+            'title' => 'Add new user',
+            'breadcrumb' => 'New User',
+            'form-title' => 'User Information',
+            'name-input' => 'Enter user name',
+            'button' => 'Create',
+            'success' => 'Create new user successfully!',
+        ],
+        'edit' => [
+            'title' => 'Update the user',
+            'breadcrumb' => 'Update the User',
+            'form-title' => 'User Information',
+            'name-input' => 'Enter user name',
+            'button' => 'Update',
+            'success' => 'Update the user successfully!',
+        ],
+        'delete' => [
+            'success' => 'Delete the user successfully!',
         ],
     ],
 ];
