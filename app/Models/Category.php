@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Model;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Category extends Model
 {
+    use SoftDeletes;
     /**
      * The table associated with the model.
      *
@@ -27,5 +29,11 @@ class Category extends Model
     public function products()
     {
         return $this->belongsToMany(App\Models\Product::class, 'product_categories', 'category_id', 'product_id');
+    }
+
+    // scope
+    public function scopeRoot($query)
+    {
+        return $query->where('parent_id', '=', 0);
     }
 }
