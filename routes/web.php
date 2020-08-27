@@ -23,3 +23,5 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::resource('categories', 'CategoryController')->except(['show']);
     Route::resource('users', 'UserController')->except(['show', 'create', 'store']);
 });
+
+Auth::routes();
