@@ -21,4 +21,5 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::get('/', 'DashboardController@index')->name('dashboard');
 
     Route::resource('categories', 'CategoryController')->except(['show']);
+    Route::resource('users', 'UserController')->except(['show', 'create', 'store']);
 });
