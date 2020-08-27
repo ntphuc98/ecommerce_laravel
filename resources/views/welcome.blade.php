@@ -67,8 +67,14 @@
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
+                    <a href="{{ route('home') }}">Home</a>
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ route('home') }}">{{ Auth::user()->name }}</a>
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
